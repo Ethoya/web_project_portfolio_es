@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "ArchivoBlack";
+  src:
+    url("../fonts/._ArchivoBlack-Regular.woff2") format("woff2"),
+    url("../fonts/._ArchivoBlack-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "OpenSans";
+  src:
+    url("../fonts/._OpenSans-Bold.woff2") format("woff2"),
+    url("../fonts/._OpenSans-Bold.woff") format("woff");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "OpenSans";
+  src:
+    url("../fonts/._OpenSans-SemiBold.woff2") format("woff2"),
+    url("../fonts/._OpenSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "OpenSans";
+  src:
+    url("../fonts/._OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/._OpenSans-Regular.woff") format("woff");
+}
+
+body {
+  background-color: #000000;
+}
+.header__title {
+  font-family: Archivo;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 72px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #ffffff;
+}
+.header__sub-title {
+  font-family: Open Sans;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #ffffff80;
+}
