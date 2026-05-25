@@ -1,0 +1,122 @@
+@font-face {
+  font-family: "ArchivoBlack";
+  src:
+    url("../fonts/ArchivoBlack-Regular.woff2") format("woff2"),
+    url("../fonts/ArchivoBlack-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "OpenSans";
+  src:
+    url("../fonts/OpenSans-Bold.woff2") format("woff2"),
+    url("../fonts/OpenSans-Bold.woff") format("woff");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "OpenSans";
+  src:
+    url("../fonts/OpenSans-SemiBold.woff2") format("woff2"),
+    url("../fonts/OpenSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "OpenSans";
+  src:
+    url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/OpenSans-Regular.woff") format("woff");
+}
+
+body {
+  background-color: #000000;
+}
+.header {
+  background: radial-gradient(circle at 75% 35%, #24154a 0%, #000000 45%);
+
+  min-height: 100vh;
+  margin: 0;
+}
+.header__div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 120px;
+  padding-top: 89px;
+  position: relative;
+  box-sizing: border-box;
+}
+.header__div-title {
+  font-family: "ArchivoBlack", sans-serif, Arial;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 1;
+  letter-spacing: 0%;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 15px;
+  max-width: 793px;
+}
+.header__div-sub-title {
+  font-family: "OpenSans", sans-serif, Arial;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0%;
+  color: #ffffff80;
+  margin: 0;
+  margin-bottom: 30px;
+  max-width: 790px;
+}
+.header__div-text-title {
+  font-family: "OpenSans", sans-serif, Arial;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0%;
+  color: #ffffff;
+  max-width: 793px;
+  margin: 0;
+}
+.header__div-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-top: 30px;
+}
+.header__div-list-item {
+  font-family: "OpenSans", sans-serif, Arial;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0%;
+  color: #ffffff;
+  list-style: NONE;
+}
+.header__div-list-item-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+.line-one {
+  max-width: 115px;
+  min-height: 5px;
+  padding-right: 30px;
+}
+.line-two {
+  max-width: 138px;
+  max-height: 5px;
+  padding-right: 30px;
+}
+.line-three {
+  max-width: 88px;
+  max-height: 5px;
+}
+
+.header__div-img-ethan {
+  position: absolute;
+  max-width: 387px;
+  max-height: 500px;
+  right: 120px;
+  top: 40px;
+
+  margin: 0;
+}
+.header__div-list-item-link:hover {
+  opacity: 0.5;
+}
