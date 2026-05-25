@@ -138,6 +138,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
   margin-right: 120px;
   margin-top: 54px;
 }
@@ -146,5 +148,5 @@ body {
   max-height: 50px;
 }
 .app-info-img-big {
-  max-height: 57px;
+  min-height: 57px;
 }
