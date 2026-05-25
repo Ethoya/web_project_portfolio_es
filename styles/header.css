@@ -52,6 +52,7 @@ body {
   margin: 0;
   margin-bottom: 15px;
   max-width: 793px;
+  min-height: 156px;
 }
 .header__div-sub-title {
   font-family: "OpenSans", sans-serif, Arial;
@@ -63,6 +64,7 @@ body {
   margin: 0;
   margin-bottom: 30px;
   max-width: 790px;
+  min-height: 25px;
 }
 .header__div-text-title {
   font-family: "OpenSans", sans-serif, Arial;
@@ -72,6 +74,7 @@ body {
   letter-spacing: 0%;
   color: #ffffff;
   max-width: 793px;
+  min-height: 150px;
   margin: 0;
 }
 .header__div-list {
@@ -119,4 +122,29 @@ body {
 }
 .header__div-list-item-link:hover {
   opacity: 0.5;
+}
+
+.header__info-apps-title {
+  font-family: "ArchivoBlack", sans-serif, Arial;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: 0%;
+  color: #ffffff;
+  padding-top: 110px;
+  margin: 0;
+}
+.header__info-apps-imgs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 120px;
+  margin-top: 54px;
+}
+.header__info-apps-img {
+  max-width: 50px;
+  max-height: 50px;
+}
+.app-info-img-big {
+  max-height: 57px;
 }
