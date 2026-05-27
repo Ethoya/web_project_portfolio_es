@@ -1,6 +1,6 @@
 # Portafolio — Ethan Otoya
 
-🌐 **Demo en vivo:** [ethoya.github.io/web_project_portfolio_es/main.html](https://ethoya.github.io/web_project_portfolio_es/main.html)
+🌐 **Demo en vivo:** [ethoya.github.io/web_project_portfolio_es/main.html](https://ethoya.github.io/web_project_portfolio_es/index.html)
 
 ---
 
