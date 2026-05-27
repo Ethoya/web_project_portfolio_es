@@ -1,50 +1,101 @@
 .content__div {
-  margin-left: calc(8.33%);
+  padding-left: calc(8.33%);
   margin-top: 50px;
 }
+
 .content__div-title {
   font-family: "ArchivoBlack", sans-serif, Arial;
   font-weight: 400;
   font-size: 40px;
-  line-height: 100%;
+  line-height: 1.5;
   letter-spacing: 0%;
   color: #ffffff;
   margin: 0;
 }
+
 .content__div-projects {
+  max-width: 100%;
   margin-top: 50px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 10%;
 }
-.content__div-projects-column {
-  margin-right: 20px;
-}
-.content__div-projects-column-img {
-  max-width: 590px;
-  max-height: 330px;
 
+.content__div-projects-column {
+  max-width: calc(40.47%);
+  background-color: #1c1c1c;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0;
+}
+
+/* ---- Wrapper de imagen con overlay e iconos ---- */
+.content__div-projects-column-img-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  /* Altura fija para que el overlay y los iconos tengan referencia */
   display: block;
 }
-.content__div-projects-column-info {
-  min-width: 590px;
-  min-height: 340px;
-  background-color: #1c1c1c;
-  padding: 30px;
-  padding-bottom: 0;
-  box-sizing: border-box;
+
+.content__div-projects-column-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  image-rendering: optimizeQuality;
 }
+
+/* Degradado oscuro de abajo hacia arriba */
+.content__div-projects-column-img-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+/* Iconos en esquina inferior izquierda */
+.content__div-projects-column-img-icons {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.content__div-projects-column-img-icons img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* ---- Info del proyecto ---- */
+.content__div-projects-column-info {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 .content__div-projects-column-info-title {
   margin: 0;
   font-family: "OpenSans", sans-serif, Arial;
   font-weight: 700;
   font-size: 24px;
-  line-height: 1;
+  line-height: 1.5;
   color: #ffffff;
-  max-width: 339px;
-  max-height: 33px;
   margin-bottom: 20px;
 }
+
 .content__div-projects-column-info-text {
   margin: 0;
   font-family: "OpenSans", sans-serif, Arial;
@@ -53,33 +104,234 @@
   line-height: 1.5;
   letter-spacing: 0%;
   color: #ffffff;
-  max-width: 530px;
-  min-height: 175px;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
+  flex-grow: 1;
 }
+
+/* Wrapper botones en fila */
+.content__div-projects-column-info-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
 .content__div-projects-column-info-button {
-  margin-right: 20px;
+  display: block;
+  height: 22px;
+  width: auto;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
 }
-main + footer {
-  background: radial-gradient(circle at 50% 35%, #24154a 0%, #111111 80%);
+
+.content__div-projects-column-info-button:hover {
+  opacity: 0.7;
+}
+
+/* ---- FOOTER ---- */
+
+.footer {
+  position: relative;
   margin: 0;
   width: 100%;
 }
-.footer__div {
-  padding-top: 100px;
-  display: flex;
-  justify-content: center;
-  display: block;
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -300px;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  background: radial-gradient(ellipse at center, #24154a 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
 }
+
+.footer__div {
+  position: relative;
+  z-index: 1;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .footer__div-title {
-  height: 25vh;
   margin: 0;
   padding: 0;
   font-family: "ArchivoBlack", sans-serif, Arial;
   font-weight: 400;
   font-size: 40px;
-  line-height: 100%;
+  line-height: 1.5;
   letter-spacing: 0%;
   text-align: center;
   color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer___div-email {
+  font-family: "OpenSans", sans-serif, Arial;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #6d6dff;
+  margin: 0;
+}
+
+.footer___div-email-link {
+  margin: 0;
+  text-decoration: none;
+}
+
+.footer__div-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  gap: 80px;
+  margin-top: 30px;
+}
+
+.footer__div-list-item {
+  list-style: none;
+  padding: 0;
+}
+
+.footer___div-email-link:hover {
+  opacity: 0.5;
+}
+
+.footer__div-list-item-img-link:hover {
+  opacity: 0.5;
+}
+
+/* ========== TABLET (≤900px) ========== */
+@media (max-width: 900px) {
+  .content__div {
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-top: 40px;
+  }
+
+  .content__div-title {
+    font-size: 32px;
+  }
+
+  .content__div-projects {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 32px;
+  }
+
+  .content__div-projects-column {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .content__div-projects-column-info-title {
+    font-size: 20px;
+  }
+
+  .content__div-projects-column-info-text {
+    font-size: 16px;
+  }
+
+  .content__div-projects-column-img-icons img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .footer__div {
+    padding-top: 80px;
+    padding-bottom: 48px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .footer__div-title {
+    font-size: 32px;
+  }
+
+  .footer__div-list {
+    gap: 48px;
+  }
+}
+
+/* ========== MOBILE (≤480px) ========== */
+@media (max-width: 480px) {
+  .content__div {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 32px;
+  }
+
+  .content__div-title {
+    font-size: 26px;
+  }
+
+  .content__div-projects {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .content__div-projects-column {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .content__div-projects-column-info {
+    padding: 20px 16px;
+  }
+
+  .content__div-projects-column-info-title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .content__div-projects-column-info-text {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .content__div-projects-column-info-button {
+    height: 20px;
+  }
+
+  .content__div-projects-column-img-icons {
+    bottom: 12px;
+    left: 12px;
+    gap: 8px;
+  }
+
+  .content__div-projects-column-img-icons img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .footer__div {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .footer__div-title {
+    font-size: 26px;
+  }
+
+  .footer___div-email {
+    font-size: 14px;
+  }
+
+  .footer__div-list {
+    gap: 32px;
+    margin-top: 24px;
+  }
 }
